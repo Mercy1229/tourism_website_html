@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="signup">
+        <h1>Signup Page</h1>
+        <form id="signup-form">
+            <input type="hidden" id="edit-id" value="">
+            <label>
+                Name:
+                <input type="text" id="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" id="email" required>
+            </label>
+            <label>
+                Password:
+                <input type="password" id="password" required>
+            </label>
+            <button type="submit">Signup</button>
+        </form>
+        <a href="homeex.html">Back to Home</a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signup-form');
+    const formTitle = document.getElementById('form-title');
+    const editIdInput = document.getElementById('edit-id');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    // Check if we're editing an existing user
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    if (user) {
+        formTitle.textContent = 'Edit Profile';
+        editIdInput.value = user.email; // or another unique identifier
+        nameInput.value = user.name || '';
+        emailInput.value = user.email || '';
+        // Password should not be pre-filled for security reasons
+    } else {
+        editIdInput.value = ''; // No existing user data
+    }
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // Get form data
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        const id = editIdInput.value;
+
+        // Create user object
+        const updatedUser = {
+            name: name,
+            email: email,
+            // Handle password securely
+            password: password,
+            profilePicture: '' // Set profile picture if available
+        };
+
+        // Save user data to localStorage
+        if (id) {
+            // Edit existing user
+            localStorage.setItem('user', JSON.stringify(updatedUser));
+        } else {
+            // Add new user (initial case)
+            localStorage.setItem('user', JSON.stringify(updatedUser));
+        }
+
+        // Redirect to home page
+        window.location.href = 'home.html';
+    });
+});
+
+    </script>
+</body>
+</html>

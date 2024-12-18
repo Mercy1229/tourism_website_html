@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards in a Carousel</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="cardcarousel" class="carousel slide carousel-bg" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="2"></button>
+  </div>
+  
+  <div class="container">
+    <h2 class="d-flex justify-content-center text-danger pt-2">Highlighted Getaway</h2>
+    <div class="carousel-inner">
+      
+      <!-- Carousel Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+                <img class="img-fluid w-100 h-100 p-2" src="india.jpg" class="card-img-top" alt="India">
+                <div class="card-body text-center">
+                  <h3 class="card-title">India</h3>
+                  <p class="card-text"><i class="fas fa-heart text-danger"></i> 40 likes</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="italy.jpg" class="card-img-top" alt="Italy">
+              <div class="card-body text-center">
+                <h3 class="card-title">Italy</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 30 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="paris.jpg" class="card-img-top" alt="Paris">
+              <div class="card-body text-center">
+                <h3 class="card-title">Paris</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 38 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="france.jpg" class="card-img-top" alt="France">
+              <div class="card-body text-center">
+                <h3 class="card-title">France</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 35 likes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Slide 2 -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="mexico.jpg" class="card-img-top" alt="Mexico">
+              <div class="card-body text-center">
+                <h3 class="card-title">Mexico</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 20 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="india.jpg" class="card-img-top" alt="India">
+              <div class="card-body text-center">
+                <h3 class="card-title">India</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 40 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="italy.jpg" class="card-img-top" alt="Italy">
+              <div class="card-body text-center">
+                <h3 class="card-title">Italy</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 30 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="paris.jpg" class="card-img-top" alt="Paris">
+              <div class="card-body text-center">
+                <h3 class="card-title">Paris</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 38 likes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Carousel Items as needed -->
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#cardcarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cardcarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+<div class="bg-dark text-white">
+  <footer class="mt-3 pt-3 w-100">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-6">
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fas fa-envelope"></i> skybound@io.com</li>
+                      <li class="list-inline-item"><i class="fas fa-phone"></i> 9040404942</li>
+                  </ul>
+              </div>
+              <div class="col-6 nav justify-content-end">
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><i class="fab fa-facebook"></i></li>
+                      <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                      <li class="list-inline-item"><i class="fab fa-linkedin"></i></li>
+                      <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+</div>
+
+<!-- Bootstrap 5 JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<div class="container-fluid bg-light" style="margin-top: 50px; margin-bottom: 50px;">
+  <h3 class="pb-2 pt-3 d-2 text-info">Frequently Asked Questions</h3>
+  <div class="container pb-3" id="FAQ">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Does SkyBound have travel guides?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  <strong>Yes!</strong> Skybound offers travel guides as part of their services, providing expert guidance to ensure a smooth and enriching travel experience.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How do I book a tour?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  You can book a tour directly through our website by selecting your desired package or contacting us for a custom itinerary.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  What is your cancellation policy?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Our cancellation policy varies by package. Please refer to the specific tour details or contact us directly for more information.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Do you offer travel insurance?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  While we do not provide travel insurance directly, we highly recommend purchasing travel insurance through a trusted provider.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                  Can I join a tour as a solo traveler?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Yes, we welcome solo travelers and can arrange group tours or private experiences tailored to your interests.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  How can I contact customer support?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  You can reach our customer support team via email, phone, or live chat on our website. We're here to help with any questions or concerns.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                  Are your tours suitable for families?
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Yes, we offer family-friendly tours and activities, ensuring fun and safety for all ages.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Do you provide accommodations?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Yes, we arrange stays in luxury and eco-friendly accommodations that align with your preferences and travel needs.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

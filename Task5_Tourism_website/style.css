@@ -1,0 +1,203 @@
+/* Header(navbar) style */
+.navbar{
+    transition: background-color 0.3s ease;
+}
+.navbar-transparent{
+    background-color: transparent;
+}
+.navbar-dark-bg{
+  background-color: rgb(0,0,0,0.8);
+}
+
+/* footer style */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+    color: #f0a500;
+}
+
+.footer-section .social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-section .social-links a:hover {
+    color: #f0a500;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* dropdown menu(profile) style */
+#profile-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px; 
+    background-color: #007bff; 
+    color: white; 
+    font-size: 20px; 
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%; 
+    text-transform: uppercase; 
+    text-decoration: none;
+}
+#profile-icon i {
+    display: none; 
+}
+.dropdown-menu {
+    padding: 5px;
+    min-width: 200px; 
+    max-width: 100%; 
+    overflow: hidden; 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+.dropdown-toggle::after {
+    display: none; 
+}
+.dropdown-item :hover {
+    background-color: #f1f1f1;
+}
+.dropdown-item.text-primary:hover {
+    background-color: transparent;
+    color: inherit; 
+    cursor: default; 
+}
+
+/* card style */
+.card{
+    transition: all 0.3s;
+    border-top-left-radius: 5px;
+}
+.card:hover{
+    transform: scale(1.15);
+    border-color:red;
+    box-shadow: 0 0 10px 2px rgb(87, 38, 38); 
+}
+#service-card:hover{
+    transform: none;
+    background-color: #333;
+    color: white;
+    box-shadow: none;
+    border:none
+}
+
+/* about us page FAQ style */
+#about{
+    font-size: 25px;
+}
+.accordion {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(114, 116, 114);
+    border-radius: 10px;
+}
+.accordion__question p {
+    margin: 5px;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 20px;
+}
+.accordion__answer p {
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    background: rgb(80, 80, 80);
+    border-radius: 10px;
+}
+.accordion:hover {
+    cursor: pointer;
+}
+.accordion__answer {
+    display: none;
+}
+.accordion.active .accordion__answer {
+    display: block;
+}
+
+/* packages style */
+#root{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+    grid-template-rows: (4,1fr);
+}
+.box{
+    border-radius: 15px;
+    border: 1px solid rgb(230, 221, 221);
+    box-shadow: 0 0 10px 2px rgb(204, 185, 185);;
+    padding: 10px;
+}
+#packageDetails{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+#packageDetails h5{
+    text-align: center;
+    font-size: 30px;  
+    font-weight: bold;
+    color: hwb(0 23% 19%);
+}
+#packageDetails h6{
+    text-align: center;
+    font-size: 20px;  
+    font-weight: bold;
+    color: hwb(0 31% 67%);
+}
+#packageDetails p{
+    text-align: justify;
+}

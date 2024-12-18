@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <nav  id="navbar" class="navbar navbar-expand-lg text-white p-2 m-2 fixed-top navbar-light navbar-transparent">
+            <div class="container-fluid">
+              <b><a class="navbar-brand text-white" href="#">SkyBound</a></b>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-info" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="service.html">Services</a>
+                  </li> 
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="packages.html">Packages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">Contact us</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2 text-white" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="profile-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" id="user-details">
+                    <!-- User details will be injected here by JavaScript -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    
+    <div class="tcb-bs-fullscreen">
+        <div id="Tourismcarousel" class="carousel slide carousel-bg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Tourismcarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#Tourismcarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#Tourismcarousel" data-bs-slide-to="2"></button>
+              </div>
+    
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\travel1.jpg" alt="travel" class="d-block w-100" height="650px">
+                    <div class="carousel-caption d-block align-item-center">
+                        <h1 class="d-block align-item-center">Lets discover the world together!</h1>
+                        <button type="button" class="btn btn-primary"><a class="text-white text-decoration-none" href="#BookForm">Book</a></button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\travel2.jpg" alt="Chicago" class="d-block w-100" height="650px">
+                  <div class="carousel-caption">
+                    <h1 class="d-block align-item-center">Travel Beyond Limits with us!</h1>
+                    <button type="button" class="btn btn-primary"><a class="text-white text-decoration-none" href="#BookForm">Book</a></button>
+                </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\travel3.jpg" alt="New York" class="d-block w-100" height="650px">
+                    <div class="carousel-caption">
+                      <h1 class="d-block align-item-center">Explore the Unexplored with your loved ones!</h1>
+                      <button type="button" class="btn btn-primary"><a class="text-white text-decoration-none" href="#BookForm">Book</a></button>
+                  </div>
+                </div>
+              </div>
+    
+            <button class="carousel-control-prev" type="button" data-bs-target="#Tourismcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#Tourismcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>     
+        </div>
+    </div>
+    
+    <div id="BookForm" class="container d-flex justify-content-center" style="margin-top: 50px;"> 
+<div class="container bg-light m-4 w-50 p-3" style="margin-top: 50px;">
+  <div class="row">
+        <form id="Book-Form" action="disply()" method="get">
+          <h3 class="d-flex justify-content-center text-danger pt-2">Book Now</h3>
+          <div class="form-group text-primary">
+              <div class="dropdown me-1">
+                <label for="destination" class="form-label">Destination</label>
+                <input class="form-control" list="datalistOptions" id="title" placeholder="Destination">
+                <datalist id="datalistOptions">
+                    <option value="India">
+                    <option value="Italy">
+                    <option value="France">
+                    <option value="Mexico">
+                    <option value="Japan">
+                    <option value="Tailand">
+                    <option value="Singapore">
+                    <option value="Koreo">
+                </datalist>
+                
+              </div>
+          </div>
+          <div class="form-group text-primary">
+            <label for="price" class="form-label">price</label>
+            <input type="number" name="price" id="price" class="form-control">
+        </div>
+        <div class="form-group text-primary">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="form-group text-primary">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" id="email" class="form-control">
+        </div>
+          <div class="form-group text-primary">
+              <label for="Depart" class="form-label">Departure</label>
+              <input type="text" name="Depart" id="Depart" class="form-control">
+          </div>
+          <div class="form-group text-primary">
+              <label for="Return" class="form-label">Date</label>
+              <input type="date" name="date" id="date" class="form-control">
+          </div>
+          <div class="d-grid gap-2 mt-4">
+            <button class="btn btn-outline-primary" type="submit">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+
+    <div class="container w-100" style="margin-top: 50px;">
+  <div class="row">
+    <div class="col-sm-3 mb-3 mb-sm-0">
+  <div class="card h-100 bg-light">
+    <img class="img-fluid w-100 h-50 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\card.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Satisfaction</h5>
+      <p class="card-text">Your satisfaction is our top priority. We strive to make every journey with us unforgettable!</p>
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-3 mb-3 mb-sm-0">
+  <div class="card h-100 bg-light">
+    <img class="img-fluid w-100 h-50 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\card2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Customer Love</h5>
+      <p class="card-text">Every smile you share with us fuels our passion to serve you better. Thank you for your love.</p>
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-3 mb-3 mb-sm-0">
+  <div class="card h-100 bg-light">
+    <img class="img-fluid w-100 h-50 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\card3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Best Price</h5>
+      <p class="card-text">Great deals, incredible savings – that’s our promise.</p>
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-3 mb-3 mb-sm-0">
+  <div class="card h-100 bg-light">
+    <img class="img-fluid w-100 h-50 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\card4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Services</h5>
+      <p class="card-text">Dedicated to providing seamless and hassle-free experiences.</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="cardcarousel" class="carousel slide carousel-bg mt-3" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#cardcarousel" data-bs-slide-to="2"></button>
+  </div>
+  
+  <div class="container" style="margin-top: 50px;">
+    <h2 class="d-flex justify-content-center text-danger pt-2" style="margin-bottom: 50px;">Highlighted Gateway</h2>
+    <div class="carousel-inner">
+      
+      <!-- Carousel Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+                <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\india.jpg" class="card-img-top" alt="India">
+                <div class="card-body text-center">
+                  <h3 class="card-title">India</h3>
+                  <p class="card-text"><i class="fas fa-heart text-danger"></i> 40 likes</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\italy.jpg" class="card-img-top" alt="Italy">
+              <div class="card-body text-center">
+                <h3 class="card-title">Italy</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 30 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\paris.jpg" class="card-img-top" alt="Paris">
+              <div class="card-body text-center">
+                <h3 class="card-title">Singapore</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 38 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\france.jpg" class="card-img-top" alt="France">
+              <div class="card-body text-center">
+                <h3 class="card-title">France</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 35 likes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Slide 2 -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\mexico.jpg" class="card-img-top" alt="Mexico">
+              <div class="card-body text-center">
+                <h3 class="card-title">Mexico</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 20 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\tailand.jpg" class="card-img-top" alt="India">
+              <div class="card-body text-center">
+                <h3 class="card-title">Tailand</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 32 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\japan.jpg" class="card-img-top" alt="Italy">
+              <div class="card-body text-center">
+                <h3 class="card-title">Japan</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 30 likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+              <img class="img-fluid w-100 h-100 p-2" src="D:\Desktop\entrans\Task5_Tourism_website\assets\home\us.jpg" class="card-img-top" alt="Paris">
+              <div class="card-body text-center">
+                <h3 class="card-title">Koreo</h3>
+                <p class="card-text"><i class="fas fa-heart text-danger"></i> 25 likes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#cardcarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cardcarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </div>
+  </div>
+
+<div class="container-fluid bg-info w-100 h-100">
+  <div class="container" style="margin: 50px; margin-bottom: 0px; padding: 200px;">
+  <h1>Unlock the World with SkyBound</h1>
+  <p>Subscribe now to receive exclusive travel deals, destination highlights, and insider tips straight 
+    to your inbox! Whether you're planning your next adventure or just dreaming of one, we've got you covered.</p>
+    <form class="w-50 d-flex align-item inline justify-content-space-between">
+      <div class="mb-3 d-flex align-item inline justify-content-space-between">
+        <input type="email" class="form-control" id="exampleInput" placeholder="Enter your email" style="margin-left: 100px;">
+        <button class="btn btn-outline-danger" style="margin-left: 10px;">Subscribe</button>
+      </div>
+    
+
+    </form>
+</div>
+</div>
+
+<div class="bg-dark text-white">
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <h5>SkyBound</h5>
+            <p>Discover the world with us! We are dedicated to providing you with the best travel experiences, whether you're looking for adventure, relaxation, or cultural immersion.</p>
+        </div>
+        
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#destinations" class="text-decoration-none text-white">Destinations</a></li>
+                <li><a href="Packages.html" class="text-decoration-none text-white">Packages</a></li>
+                <li><a href="service.html" class="text-decoration-none text-white">Services</a></li>
+                <li><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li>
+                <li><a href="#faq" class="text-decoration-none text-white">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Wanderlust City, Country</li>
+                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope"></i> info@tourismwebsite.com</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section follow-us">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 TourismWebsite. All Rights Reserved.</p>
+    </div>
+</footer>
+</footer>
+</div>
+<script>
+   window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-dark-bg');
+                navbar.classList.remove('navbar-transparent');
+            } else {
+                navbar.classList.add('navbar-transparent');
+                navbar.classList.remove('navbar-dark-bg');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    const profileIconElement = document.getElementById('profile-icon');
+    const userDetailsElement = document.getElementById('user-details');
+
+    // Retrieve user data from localStorage
+    const user = JSON.parse(localStorage.getItem('reg_formData'));
+
+    if (user) {
+        const userEmail = user.email || '';
+        const initial = userEmail.charAt(0).toUpperCase();
+
+        // Display the first letter of the email in the profile icon
+        profileIconElement.textContent = initial;
+
+        // Display user details in the dropdown menu
+        userDetailsElement.innerHTML = `
+            <li><a class="dropdown-item text-primary" style="dropdown-item:hover {
+    background-color: none;
+  }">Logged in as ${user.name || 'User'}</a></li>
+            <li><a class="dropdown-item text-primary">${user.email}</a></li>
+            <li><a href="#" class="dropdown-item" onclick="editProfile()"><i class="fas fa-pencil-square-o"></i> Edit Profile</a></li>
+            <li><a href="#" class="dropdown-item" onclick="signOut()"><i class="fas fa-sign-out"></i> Sign Out</a></li>
+        `;
+    } else {
+        profileIconElement.textContent = '?';
+        userDetailsElement.innerHTML = `
+            <li><p class="dropdown-item">Not logged in</p></li>
+        `;
+    }
+});
+        function editProfile() {
+            localStorage.setItem('isEditMode', 'true');
+            window.location.href = 'file:///D://Desktop//entrans//signup.html';
+        }
+
+        function signOut() {
+            localStorage.removeItem('user');
+            window.location.href = 'samPack.html';
+        }
+  </script>
+</body>
+</html>
